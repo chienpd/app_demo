@@ -1,2 +1,2 @@
-class Micropost < ApplicationRecord
+class Micropost < ActiveRecord::Base
 end

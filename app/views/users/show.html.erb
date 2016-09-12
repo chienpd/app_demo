@@ -4,13 +4,14 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
-p>
-	<strong>Microposts</strong>
-	<ul>
-		<% Micropost::where(user_id: @user.id).each do |p| %>
-	    <li><%= p.content %></li>
-	    <% end %>
-	</ul>
+
+<p>
+  <strong>Microposts</strong>
+  <ul>
+    <% Micropost::where(user_id: @user.id).each do |p| %>
+        <li><%= p.content %></li>
+    <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
